@@ -2,8 +2,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        ThreadPool t = ThreadPool.getInstance2();
-        
+        ThreadPool t = ThreadPool.getInstance();
+
         Thread t1 = new Thread(new Task("A"));
         Thread t2 = new Thread(new Task("B"));
         Thread t3 = new Thread(new Task("C"));

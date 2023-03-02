@@ -4,10 +4,8 @@ public class ThreadPool {
     private static volatile ThreadPool threadPoolObject = null;
     public static volatile int count = size;
 
-    ThreadPool() {
-    }
 
-    public static ThreadPool getInstance2() {
+    public static ThreadPool getInstance() {
         if (threadPoolObject == null) {
             synchronized (ThreadPool.class) {
                 if (threadPoolObject == null) {
