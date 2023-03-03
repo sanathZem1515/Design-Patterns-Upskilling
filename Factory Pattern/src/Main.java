@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws InstantiationException, IllegalAccessException {
         
         Order foodOrder =  OnlineOrderProcessingFactory.createOrder(OrderEnum.FOOD);
         foodOrder.processOrder();
