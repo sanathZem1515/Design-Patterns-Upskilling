@@ -1,14 +1,14 @@
 public enum OrderEnum {
-    FOOD(new FoodOrder()),
-    CLOTHING(new ClothingOrder()),
-    ELECTRONICS(new ElectronicsOrder());
+    FOOD("FoodOrder"),
+    CLOTHING("ClothingOrder"),
+    ELECTRONICS("ElectronicsOrder");
 
-    private Order className;
+    private String className;
 
-    OrderEnum(Order className) {
+    OrderEnum(String className) {
         this.className = className;
     }
-    public Order getObject() {
-        return className;
+    public Order getObject() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
+        return (Order) Class.forName(className).newInstance();
     }
 }
